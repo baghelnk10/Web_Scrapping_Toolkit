@@ -28,7 +28,7 @@ reference = "master"
 url = f"https://gitlab.desy.de/api/v4/projects/{encoded_project_namespace}/repository/files/{encoded_path}/raw?ref={reference}"
 
 # Replace 'access_token' with your GitLab access token
-access_token = "uLp5B4brvzGttaw5x5xR"
+access_token = "Your_Access_Token"
 
 # Set up headers with the access token for authentication
 headers = {
