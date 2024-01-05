@@ -14,12 +14,12 @@
 import requests
 
 # Define the GitLab project namespace, project name, and file path
-# For example, project_path = "belle2/data-production/mc"
-# For example, file_path = "MC10/release-01-00-01/DB00000294/4S/signal/3470020000.py"
-encoded_project_namespace = requests.utils.quote(file_path, safe='')   # output same as below
-encoded_project_namespace = "belle2%2Fdata-production%2Fmc"
+project_path = "belle2/data-production/mc"                             # For example
+file_path = "MC10/release-01-00-01/DB00000294/4S/signal/3470020000.py" #For Example
+encoded_project_namespace = requests.utils.quote(project_path, safe='')   # output same as below
+#encoded_project_namespace = "belle2%2Fdata-production%2Fmc"
 encoded_path = requests.utils.quote(file_path, safe='')  # output same as below
-encoded_path= "MC10%2Frelease-01-00-01%2FDB00000294%2F4S%2Fsignal%2F3470020000.py" 
+#encoded_path= "MC10%2Frelease-01-00-01%2FDB00000294%2F4S%2Fsignal%2F3470020000.py" 
 
 # Specify the branch or reference (e.g., "master")
 reference = "master"
@@ -28,7 +28,7 @@ reference = "master"
 url = f"https://gitlab.desy.de/api/v4/projects/{encoded_project_namespace}/repository/files/{encoded_path}/raw?ref={reference}"
 
 # Replace 'access_token' with your GitLab access token
-access_token = "your_access_token"
+access_token = "uLp5B4brvzGttaw5x5xR"
 
 # Set up headers with the access token for authentication
 headers = {
